@@ -17,16 +17,33 @@ class AudioModel {
     // the user can access these arrays at any time and plot them if they like
     var timeData:[Float]
     var fftData:[Float]
+//    var maxFftData:[Float]
     lazy var samplingRate:Int = {
         return Int(self.audioManager!.samplingRate)
     }()
     
+    private var __maxFftData: [Float]
+    private var __numberofChunks: Int
+    
+    var maxFftData: [Float] {
+        get {
+            for (index, element) in fftData.chunked(into: __numberofChunks).enumerated() {
+                vDSP_maxv(element, 1, &__maxFftData[index], vDSP_Length(element.count))
+            }
+            
+            return __maxFftData
+        }
+    }
+    
     // MARK: Public Methods
     init(buffer_size:Int) {
+        print("INIT AUDIO MODEL")
         BUFFER_SIZE = buffer_size
         // anything not lazily instatntiated should be allocated here
         timeData = Array.init(repeating: 0.0, count: BUFFER_SIZE)
         fftData = Array.init(repeating: 0.0, count: BUFFER_SIZE/2)
+        __maxFftData = Array.init(repeating: 0.0, count: 20)
+        __numberofChunks =  Int(ceil(Double(fftData.count)/20))
     }
     
     // public function for starting processing of microphone data
@@ -63,8 +80,6 @@ class AudioModel {
             manager.teardownAudio()
         }
     }
-    
-    func
     
     
     //==========================================
@@ -118,4 +133,12 @@ class AudioModel {
     }
     
     
+}
+
+extension Array {
+    func chunked(into size: Int) -> [[Element]] {
+        return stride(from: 0, to: count, by: size).map {
+            Array(self[$0 ..< Swift.min($0 + size, count)])
+        }
+    }
 }
