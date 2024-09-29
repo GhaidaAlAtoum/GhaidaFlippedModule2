@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		F6ECA4022CA9E51B002980E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6ECA3E32CA9E51A002980E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6ECA3EA2CA9E51A002980E9;
+			remoteInfo = GhaidaFlippedModule2;
+		};
+		F6ECA40C2CA9E51B002980E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6ECA3E32CA9E51A002980E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6ECA3EA2CA9E51A002980E9;
+			remoteInfo = GhaidaFlippedModule2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F6ECA3EB2CA9E51A002980E9 /* GhaidaFlippedModule2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GhaidaFlippedModule2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6ECA4012CA9E51B002980E9 /* GhaidaFlippedModule2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GhaidaFlippedModule2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6ECA40B2CA9E51B002980E9 /* GhaidaFlippedModule2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GhaidaFlippedModule2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		F6ECA4132CA9E51B002980E9 /* Exceptions for "GhaidaFlippedModule2" folder in "GhaidaFlippedModule2" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = F6ECA3EA2CA9E51A002980E9 /* GhaidaFlippedModule2 */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		F6ECA3ED2CA9E51A002980E9 /* GhaidaFlippedModule2 */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				F6ECA4132CA9E51B002980E9 /* Exceptions for "GhaidaFlippedModule2" folder in "GhaidaFlippedModule2" target */,
+			);
+			path = GhaidaFlippedModule2;
+			sourceTree = "<group>";
+		};
+		F6ECA4042CA9E51B002980E9 /* GhaidaFlippedModule2Tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = GhaidaFlippedModule2Tests;
+			sourceTree = "<group>";
+		};
+		F6ECA40E2CA9E51B002980E9 /* GhaidaFlippedModule2UITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = GhaidaFlippedModule2UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F6ECA3E82CA9E51A002980E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6ECA3FE2CA9E51B002980E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6ECA4082CA9E51B002980E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F6ECA3E22CA9E51A002980E9 = {
+			isa = PBXGroup;
+			children = (
+				F6ECA3ED2CA9E51A002980E9 /* GhaidaFlippedModule2 */,
+				F6ECA4042CA9E51B002980E9 /* GhaidaFlippedModule2Tests */,
+				F6ECA40E2CA9E51B002980E9 /* GhaidaFlippedModule2UITests */,
+				F6ECA3EC2CA9E51A002980E9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F6ECA3EC2CA9E51A002980E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6ECA3EB2CA9E51A002980E9 /* GhaidaFlippedModule2.app */,
+				F6ECA4012CA9E51B002980E9 /* GhaidaFlippedModule2Tests.xctest */,
+				F6ECA40B2CA9E51B002980E9 /* GhaidaFlippedModule2UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F6ECA3EA2CA9E51A002980E9 /* GhaidaFlippedModule2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6ECA4142CA9E51B002980E9 /* Build configuration list for PBXNativeTarget "GhaidaFlippedModule2" */;
+			buildPhases = (
+				F6ECA3E72CA9E51A002980E9 /* Sources */,
+				F6ECA3E82CA9E51A002980E9 /* Frameworks */,
+				F6ECA3E92CA9E51A002980E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F6ECA3ED2CA9E51A002980E9 /* GhaidaFlippedModule2 */,
+			);
+			name = GhaidaFlippedModule2;
+			packageProductDependencies = (
+			);
+			productName = GhaidaFlippedModule2;
+			productReference = F6ECA3EB2CA9E51A002980E9 /* GhaidaFlippedModule2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F6ECA4002CA9E51B002980E9 /* GhaidaFlippedModule2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6ECA4192CA9E51B002980E9 /* Build configuration list for PBXNativeTarget "GhaidaFlippedModule2Tests" */;
+			buildPhases = (
+				F6ECA3FD2CA9E51B002980E9 /* Sources */,
+				F6ECA3FE2CA9E51B002980E9 /* Frameworks */,
+				F6ECA3FF2CA9E51B002980E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6ECA4032CA9E51B002980E9 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F6ECA4042CA9E51B002980E9 /* GhaidaFlippedModule2Tests */,
+			);
+			name = GhaidaFlippedModule2Tests;
+			packageProductDependencies = (
+			);
+			productName = GhaidaFlippedModule2Tests;
+			productReference = F6ECA4012CA9E51B002980E9 /* GhaidaFlippedModule2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F6ECA40A2CA9E51B002980E9 /* GhaidaFlippedModule2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6ECA41C2CA9E51B002980E9 /* Build configuration list for PBXNativeTarget "GhaidaFlippedModule2UITests" */;
+			buildPhases = (
+				F6ECA4072CA9E51B002980E9 /* Sources */,
+				F6ECA4082CA9E51B002980E9 /* Frameworks */,
+				F6ECA4092CA9E51B002980E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6ECA40D2CA9E51B002980E9 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F6ECA40E2CA9E51B002980E9 /* GhaidaFlippedModule2UITests */,
+			);
+			name = GhaidaFlippedModule2UITests;
+			packageProductDependencies = (
+			);
+			productName = GhaidaFlippedModule2UITests;
+			productReference = F6ECA40B2CA9E51B002980E9 /* GhaidaFlippedModule2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F6ECA3E32CA9E51A002980E9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					F6ECA3EA2CA9E51A002980E9 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					F6ECA4002CA9E51B002980E9 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = F6ECA3EA2CA9E51A002980E9;
+					};
+					F6ECA40A2CA9E51B002980E9 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = F6ECA3EA2CA9E51A002980E9;
+					};
+				};
+			};
+			buildConfigurationList = F6ECA3E62CA9E51A002980E9 /* Build configuration list for PBXProject "GhaidaFlippedModule2" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F6ECA3E22CA9E51A002980E9;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = F6ECA3EC2CA9E51A002980E9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F6ECA3EA2CA9E51A002980E9 /* GhaidaFlippedModule2 */,
+				F6ECA4002CA9E51B002980E9 /* GhaidaFlippedModule2Tests */,
+				F6ECA40A2CA9E51B002980E9 /* GhaidaFlippedModule2UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F6ECA3E92CA9E51A002980E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6ECA3FF2CA9E51B002980E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6ECA4092CA9E51B002980E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F6ECA3E72CA9E51A002980E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6ECA3FD2CA9E51B002980E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6ECA4072CA9E51B002980E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F6ECA4032CA9E51B002980E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6ECA3EA2CA9E51A002980E9 /* GhaidaFlippedModule2 */;
+			targetProxy = F6ECA4022CA9E51B002980E9 /* PBXContainerItemProxy */;
+		};
+		F6ECA40D2CA9E51B002980E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6ECA3EA2CA9E51A002980E9 /* GhaidaFlippedModule2 */;
+			targetProxy = F6ECA40C2CA9E51B002980E9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F6ECA4152CA9E51B002980E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X94CCMXQJJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GhaidaFlippedModule2/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ghaidaAtoum.GhaidaFlippedModule2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F6ECA4162CA9E51B002980E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X94CCMXQJJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GhaidaFlippedModule2/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ghaidaAtoum.GhaidaFlippedModule2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F6ECA4172CA9E51B002980E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F6ECA4182CA9E51B002980E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F6ECA41A2CA9E51B002980E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X94CCMXQJJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ghaidaAtoum.GhaidaFlippedModule2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GhaidaFlippedModule2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GhaidaFlippedModule2";
+			};
+			name = Debug;
+		};
+		F6ECA41B2CA9E51B002980E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X94CCMXQJJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ghaidaAtoum.GhaidaFlippedModule2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GhaidaFlippedModule2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GhaidaFlippedModule2";
+			};
+			name = Release;
+		};
+		F6ECA41D2CA9E51B002980E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X94CCMXQJJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ghaidaAtoum.GhaidaFlippedModule2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GhaidaFlippedModule2;
+			};
+			name = Debug;
+		};
+		F6ECA41E2CA9E51B002980E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X94CCMXQJJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ghaidaAtoum.GhaidaFlippedModule2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GhaidaFlippedModule2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F6ECA3E62CA9E51A002980E9 /* Build configuration list for PBXProject "GhaidaFlippedModule2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6ECA4172CA9E51B002980E9 /* Debug */,
+				F6ECA4182CA9E51B002980E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6ECA4142CA9E51B002980E9 /* Build configuration list for PBXNativeTarget "GhaidaFlippedModule2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6ECA4152CA9E51B002980E9 /* Debug */,
+				F6ECA4162CA9E51B002980E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6ECA4192CA9E51B002980E9 /* Build configuration list for PBXNativeTarget "GhaidaFlippedModule2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6ECA41A2CA9E51B002980E9 /* Debug */,
+				F6ECA41B2CA9E51B002980E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6ECA41C2CA9E51B002980E9 /* Build configuration list for PBXNativeTarget "GhaidaFlippedModule2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6ECA41D2CA9E51B002980E9 /* Debug */,
+				F6ECA41E2CA9E51B002980E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F6ECA3E32CA9E51A002980E9 /* Project object */;
+}
