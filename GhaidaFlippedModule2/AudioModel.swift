@@ -12,18 +12,15 @@ import Accelerate
 class AudioModel {
     
     // MARK: Properties
-    private var BUFFER_SIZE:Int
+    
     // thse properties are for interfaceing with the API
     // the user can access these arrays at any time and plot them if they like
     var timeData:[Float]
     var fftData:[Float]
-//    var maxFftData:[Float]
+    
     lazy var samplingRate:Int = {
         return Int(self.audioManager!.samplingRate)
     }()
-    
-    private var __maxFftData: [Float]
-    private var __numberofChunks: Int
     
     var maxFftData: [Float] {
         get {
@@ -35,15 +32,24 @@ class AudioModel {
         }
     }
     
+    //==========================================
+    // MARK: Private Properties
+    
+    private var BUFFER_SIZE:Int
+    private var EQUALIZER_SIZE:Int
+    private var __maxFftData: [Float]
+    private var __numberofChunks: Int
+    private var volume:Float = 5.0 // internal storage for volume
+    
     // MARK: Public Methods
-    init(buffer_size:Int) {
-        print("INIT AUDIO MODEL")
+    init(buffer_size:Int, equalizer_size: Int) {
         BUFFER_SIZE = buffer_size
+        EQUALIZER_SIZE = equalizer_size
         // anything not lazily instatntiated should be allocated here
         timeData = Array.init(repeating: 0.0, count: BUFFER_SIZE)
         fftData = Array.init(repeating: 0.0, count: BUFFER_SIZE/2)
-        __maxFftData = Array.init(repeating: 0.0, count: 20)
-        __numberofChunks =  Int(ceil(Double(fftData.count)/20))
+        __maxFftData = Array.init(repeating: 0.0, count: EQUALIZER_SIZE)
+        __numberofChunks =  Int(ceil(Double(fftData.count)/Double(EQUALIZER_SIZE)))
     }
     
     // public function for starting processing of microphone data
@@ -61,6 +67,21 @@ class AudioModel {
         }
     }
     
+    func startProcesingAudioFileForPlayback(withFps:Double){
+        // set the output block to read from and play the audio file
+        if let manager = self.audioManager,
+           let fileReader = self.fileReader{
+            manager.outputBlock = self.handleSpeakerQueryWithAudioFile
+            fileReader.play() // tell file Reader to start filling its buffer
+            
+            // repeat this fps times per second using the timer class
+            //   every time this is called, we update the arrays "timeData" and "fftData"
+            Timer.scheduledTimer(withTimeInterval: 1.0/withFps, repeats: true) { _ in
+                self.runEveryInterval()
+            }
+        }
+    }
+    
     
     // You must call this when you want the audio to start being handled by our model
     func play(){
@@ -75,9 +96,16 @@ class AudioModel {
         }
     }
     
-    func tearDown(){
-        if let manager = self.audioManager{
-            manager.teardownAudio()
+    
+    func togglePlaying() {
+        if let manager = self.audioManager, let reader=self.fileReader{
+            if manager.playing{
+                manager.pause()
+                reader.pause()
+            }else {
+                manager.play()
+                reader.play()
+            }
         }
     }
     
@@ -102,6 +130,25 @@ class AudioModel {
     //==========================================
     // MARK: Private Methods
     // NONE for this model
+    private lazy var fileReader:AudioFileReader? = {
+        // find song in the main Bundle
+        if let url = Bundle.main.url(forResource: "satisfaction", withExtension: "mp3"){
+            // if we could find the url for the song in main bundle, setup file reader
+            // the file reader is doing a lot here becasue its a decoder
+            // so when it decodes the compressed mp3, it needs to know how many samples
+            // the speaker is expecting and how many output channels the speaker has (mono, left/right, surround, etc.)
+            var tmpFileReader:AudioFileReader? = AudioFileReader.init(audioFileURL: url,
+                                                   samplingRate: Float(audioManager!.samplingRate),
+                                                   numChannels: audioManager!.numOutputChannels)
+            
+            tmpFileReader!.currentTime = 0.0 // start from time zero!
+            print("Audio file succesfully loaded for \(url)")
+            return tmpFileReader
+        }else{
+            print("Could not initialize audio input file")
+            return nil
+        }
+    }()
     
     //==========================================
     // MARK: Model Callback Methods
@@ -127,6 +174,26 @@ class AudioModel {
     // MARK: Audiocard Callbacks
     // in obj-C it was (^InputBlock)(float *data, UInt32 numFrames, UInt32 numChannels)
     // and in swift this translates to:
+    private func handleSpeakerQueryWithAudioFile(data:Optional<UnsafeMutablePointer<Float>>,
+                                                 numFrames:UInt32,
+                                                 numChannels: UInt32){
+        if let file = self.fileReader{
+            
+            // read from file, loading into data (a float pointer)
+            if let arrayData = data{
+                // get samples from audio file, pass array by reference
+                file.retrieveFreshAudio(arrayData,
+                                        numFrames: numFrames,
+                                        numChannels: numChannels)
+                // that is it! The file was just loaded into the data array
+                
+                // adjust volume of audio file output
+                vDSP_vsmul(arrayData, 1, &(self.volume), arrayData, 1, vDSP_Length(numFrames*numChannels))
+                self.inputBuffer?.addNewFloatData(arrayData, withNumSamples: Int64(numFrames))
+            }
+        }
+    }
+    
     private func handleMicrophone (data:Optional<UnsafeMutablePointer<Float>>, numFrames:UInt32, numChannels: UInt32) {
         // copy samples from the microphone into circular buffer
         self.inputBuffer?.addNewFloatData(data, withNumSamples: Int64(numFrames))
@@ -135,6 +202,7 @@ class AudioModel {
     
 }
 
+//Mark: Array Extension for Chunked
 extension Array {
     func chunked(into size: Int) -> [[Element]] {
         return stride(from: 0, to: count, by: size).map {

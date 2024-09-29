@@ -53,13 +53,13 @@
                             <tableViewSection headerTitle="Functionality" id="05u-yy-TkC">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="XDz-zU-WAA">
-                                        <rect key="frame" x="20" y="55.333332061767578" width="353" height="48.333332061767578"/>
+                                        <rect key="frame" x="20" y="55.333332061767578" width="353" height="63"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XDz-zU-WAA" id="Yan-ZX-VAb">
-                                            <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="48.333332061767578"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="63"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <listContentConfiguration key="contentConfiguration" text="Analyze Microphone" secondaryText=""/>
+                                        <listContentConfiguration key="contentConfiguration" text="Analyze Audio" secondaryText="FFT Analysis"/>
                                         <connections>
                                             <segue destination="BYZ-38-t0r" kind="show" id="4yB-eg-gZj"/>
                                         </connections>

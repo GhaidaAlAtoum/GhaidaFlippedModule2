@@ -12,10 +12,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var userView: UIView!
     struct AudioConstants{
         static let AUDIO_BUFFER_SIZE = 1024*4
+        static let NUM_EQUALIZER_POINTS = 20
     }
     
     // setup audio model
-    let audio = AudioModel(buffer_size: AudioConstants.AUDIO_BUFFER_SIZE)
+    let audio = AudioModel(buffer_size: AudioConstants.AUDIO_BUFFER_SIZE, equalizer_size: AudioConstants.NUM_EQUALIZER_POINTS)
     lazy var graph:MetalGraph? = {
         return MetalGraph(userView: self.userView)
     }()
@@ -23,18 +24,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("View loaded")
         setupGraph()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print("view did appear")
+        super.viewDidAppear(animated)
         self.audio.play()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print("View Will Disapper")
         self.audio.stop()
     }
     
@@ -78,15 +77,16 @@ class ViewController: UIViewController {
             
             graph.addGraph(withName: "fftMax",
                            shouldNormalizeForFFT: true,
-                           numPointsInGraph: 20) // 20 points to display
+                           numPointsInGraph: AudioConstants.NUM_EQUALIZER_POINTS)
         
             graph.makeGrids() // add grids to graph
         }
         
         // start up the audio model here, querying microphone
-        audio.startMicrophoneProcessing(withFps: 20) // preferred number of FFT calculations per second
-
-        audio.play()
+        // audio.startMicrophoneProcessing(withFps: 20) // preferred number of FFT calculations per second
+        audio.startProcesingAudioFileForPlayback(withFps: 20)
+        
+        audio.togglePlaying()
         
         // run the loop for updating the graph peridocially
         Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) { _ in
